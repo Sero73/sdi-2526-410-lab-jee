@@ -1,4 +1,4 @@
-package com.uniovi.sdi.sdi2526410labjee;
+package com.uniovi.sdi;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
