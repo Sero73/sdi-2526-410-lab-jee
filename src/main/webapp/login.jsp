@@ -42,8 +42,7 @@ FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="a
         <div class="form-group">
             <label class="control-label col-sm-2" for="password">Password:</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="password" name="password"
-                       required/>
+                <input type="password" class="form-control" id="password" name="password" required/>
             </div>
         </div>
         <div class="form-group">
