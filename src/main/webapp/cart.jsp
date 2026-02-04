@@ -54,7 +54,15 @@ sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="a
     <ul>
         <c:forEach var="item" items="${selectedItems}">
             <tr>
-                <li>${item.key} - ${item.value} </li>
+                <li>${item.key} - ${item.value}
+                <span>
+                    <form action="DeleteFromShoppingCart" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="product" value="${item.key}">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </span>
+                </li>
             </tr>
         </c:forEach>
     </ul>
