@@ -17,7 +17,6 @@ sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="a
 <jsp:setProperty name="counter" property="increase" value="1"/>
 
 <!-- Barra de Navegación superior -->
-<<!-- Barra de Navegación superior -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="collapse navbar-collapse" id="my-navbarColor02">
         <ul class="navbar-nav me-auto">
@@ -33,6 +32,14 @@ sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="a
             <li class="nav-item">
                 <a class="nav-link" href="admin.jsp">Administrar productos</a>
             </li>
+            <%--      Ejercicio 1 inicio--%>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="products">
+                    Productos
+                    <span class="visually-hidden">(current)</span>
+                </a>
+            </li>
+            <%--      Ejercicio 1 fin--%>
         </ul>
         <!-- Alineado a la derecha -->
         <div class="text-white ms-auto">

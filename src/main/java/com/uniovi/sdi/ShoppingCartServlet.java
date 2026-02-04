@@ -9,16 +9,19 @@ import java.util.Map;
 
 @WebServlet(name = "ShoppingCartServlet", value = "/AddToShoppingCart")
 public class ShoppingCartServlet  extends HttpServlet  {
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
         HttpSession session = request.getSession();
         HashMap<String, Integer> cart =
                 (HashMap<String, Integer>) session.getAttribute("cart");
-// No hay carrito, creamos uno y lo insertamos en sesión
+
+        // No hay carrito, creamos uno y lo insertamos en sesión
         if (cart == null) {
             cart = new HashMap<String, Integer>();
             session.setAttribute("cart", cart);
         }
+
         String product = request.getParameter("product");
         if (product != null) {
             addToShoppingCart(cart, product);
@@ -27,6 +30,16 @@ public class ShoppingCartServlet  extends HttpServlet  {
         // Retornar la vista con parámetro "selectedItems"
         request.setAttribute("selectedItems", cart);
         getServletContext().getRequestDispatcher("/cart.jsp").forward(request, response);
+
+    /* Eliminado al aplicar el patrón MVC
+    response.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
+    out.println("<HTML>");
+    out.println("<HEAD><TITLE>Tienda SDI: Cesta de la compra</TITLE></HEAD>");
+    out.println("<BODY>");
+    out.println(shoppingCartToHtml(cart) + "<br>");
+    out.println("<a href=\"index.jsp\">Volver</a></BODY></HTML>");*/
     }
 
     private void addToShoppingCart(Map<String,Integer> cart, String productKey){

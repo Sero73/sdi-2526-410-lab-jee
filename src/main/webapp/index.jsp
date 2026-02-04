@@ -34,6 +34,14 @@ FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="a
       <li class="nav-item">
         <a class="nav-link" href="admin.jsp">Administrar productos</a>
       </li>
+<%--      Ejercicio 1 inicio--%>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="products">
+          Productos
+          <span class="visually-hidden">(current)</span>
+        </a>
+      </li>
+<%--      Ejercicio 1 fin--%>
     </ul>
     <!-- Alineado a la derecha -->
     <div class="text-white ms-auto">
